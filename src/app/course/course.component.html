@@ -1,0 +1,15 @@
+<div *ngIf="course.student > 0">
+  <h1 class="d-flex justify-content-center pt-4">{{ comapany }}</h1>
+</div>
+<div class="p-2">
+  <button class="btn btn-info" (click)="addCource()">All Course</button>
+</div>
+<!-- <div class="p-4 fs-3 d-flex justify-content-center">
+  {{ course.title | uppercase }}<br />
+  {{ course.rating | number : "2.2-2" }}<br />
+  {{ course.student | number }}<br />
+  {{ course.price | currency : "AUD" : true : "3.2-2" }}<br />
+  {{ course.releaseDate | date : "shortDate" }}
+</div> -->
+
+<app-course-list [course]="courseList" (selectedCourse)="selectCourse($event)"></app-course-list>

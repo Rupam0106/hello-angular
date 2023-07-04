@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Student</th>
+      <th scope="col">Price</th>
+      <th scope="col">ReleaseDate</th>
+      <th scope="col">Action</th>
+    </tr>
+    <tr *ngFor="let course of course; let i = index">
+      <th scope="row">{{ i }}</th>
+      <td>{{ course.title | uppercase }}</td>
+      <td>{{ course.rating | number : "2.2-2" }}</td>
+      <td>{{ course.student | number }}</td>
+      <td>{{ course.price | currency : "AUD" : true : "3.2-2" }}</td>
+      <td>{{ course.releaseDate | date : "shortDate" }}</td>
+      <td>
+        <button class="btn btn-info" (click)="(selectCourse(course))">
+            Select
+          </button>
+      </td>
+    </tr>
+  </thead>
+</table>

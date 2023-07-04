@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component';
 @Component({
   template: `
     <main>
@@ -11,9 +10,7 @@ import { HomeComponent } from './home/home.component';
           aria-hidden="true"
         />
       </header>
-      <section class="content">
-        <app-home></app-home>
-      </section>
+      <section class="content"></section>
     </main>
   `,
   selector: 'app-root',
@@ -22,4 +19,5 @@ import { HomeComponent } from './home/home.component';
 })
 export class AppComponent {
   title = 'homes';
+  role = 'User';
 }

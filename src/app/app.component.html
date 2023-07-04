@@ -1,3 +1,11 @@
-<h2>Hello Angular</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolorum quam quia tenetur velit quasi necessitatibus rerum quo repellendus eligendi quas, tempore, debitis saepe sit voluptas voluptates, dignissimos dolores soluta! Voluptas laboriosam sit praesentium accusantium sapiente molestiae blanditiis corrupti deleniti, quam provident excepturi minus!</p>
-<app-home></app-home>
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'User'">
+    <app-navbar></app-navbar>
+    <app-home></app-home> 
+    <app-footer></app-footer>
+  </div>
+  <div *ngSwitchCase="'Admin'">
+    <app-course></app-course>
+  </div>
+  <div *ngSwitchDefault>You are not authorized to access the page</div>
+</div>
